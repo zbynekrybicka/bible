@@ -1,0 +1,6 @@
+{
+    "require": {
+        "firebase/php-jwt": "^6.4",
+        "dibi/dibi": "^4.2"
+    }
+}
