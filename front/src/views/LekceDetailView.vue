@@ -4,14 +4,14 @@
             <input type="text" v-model="lekce.nazev" class="form-control" @change="putLekce" />
         </div>
         <div class="form-group">
-            <textarea type="text" v-model="lekce.popis" class="form-control" placeholder="Zadejte popis..." rows="5" @change="putLekce" />
+            <textarea type="text" v-model="lekce.popis" class="form-control" placeholder="Zadejte popis..." rows="30" @change="putLekce" />
         </div>
         <h2>Verše</h2>
         <LekceVerse :lekce="lekce" />
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Nový verš..." @change="novyVers" list="knihy"/>
             <datalist id="knihy">
-                <option :value="kniha" v-for="kniha of knihy" />
+                <option :value="kniha" v-for="(kniha, index) of knihy" :key="index" />
             </datalist>
             <input type="text" class="form-control" placeholder="Poznámka..." @change="vlozitPoznamku" />
         </div>
